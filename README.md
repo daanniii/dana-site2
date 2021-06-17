@@ -1,1 +1,1 @@
-# dana-site2 (라이킷)
+# dana-site2
