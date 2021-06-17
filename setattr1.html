@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page_n2</title>
+  <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+  <div id="container">
+    <h1 id="heading">오버액션고양이</h1>
+    <div id="prod-pic">
+      <img src="고양케이스메인.jpg" alt="오버액션고양이" id="wawa" width="350" height="350">
+      <div id="small-pic">
+        <img src="고양케이스메인.jpg" class="small">
+        <img src="고양케이스1.jpg" class="small">
+        <img src="고양케이스2.jpg" class="small">
+        <img src="고양케이스3.jpg" class="small">
+      </div>
+    </div>
+    <div id="desc">
+      <ul>
+        <li>상품명 : 오버액션고양이</li>
+        <li class="bluetext">판매가 : 5,000원</li>
+        <li>배송비 : 3,000원<br>(50,000원 이상 구매시 무료)</li>
+        <li>적립금 : 500원(10%)</li>
+        <li>제조일 : 2021.06.15</li><br><br>
+        <button>장바구니담기</button>
+        <button>바로구매하기</button>
+      </ul>
+      <a href="javascript:doDisplay();" onclick="addContents(); this.onclick='';">상세 설명 보기</a>
+      <div id="view"></div>
+    </div>
+
+    <div id="detail">
+      <hr><br>
+      <h2>상품 상세 정보</h2><br>
+      <ul>
+        <li>상품명 : 오버액션고양이</li>
+        <li>특  징 : 깔끔함</li>
+        <li>크  기 : 딱 괜찮은 크기</li>
+      </ul><br>
+      <h3>Information</h3>
+      <p>고양이로 돌아온 오버액션 시리즈!</p>
+      <h3>Detail</h3>
+      <p>쫑긋거리는 오버액션고양이와 함께라면 온종일 행복하지요</p>
+      <br>
+      <img src="케이스상세.jpg" style="width:750px; height:auto;"><br>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    var wawa = document.querySelector("#wawa");
+    var smallPics = document.querySelectorAll(".small");
+
+    for (let i = 0; i < smallPics.length; i++) {
+      smallPics[i].addEventListener("click", changePic);
+    }
+
+    function changePic() {
+      var newPic = this.src;
+      wawa.setAttribute("src", newPic);
+    }
+
+    function doDisplay() {
+      var con = document.getElementById("detail");
+      if (con.style.display == "none") {
+        con.style.display = 'block';
+      }
+      else {
+        con.style.display = 'none';
+      }
+    }
+
+  </script>
+</body>
+
+</html>
